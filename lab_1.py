@@ -7,7 +7,7 @@ def laplace_function(x):
 
 
 M_rectangle_trapezoid_method = 2 / math.exp(3 / 2)
-M_simpsons_method = 2 / (math.exp(math.sqrt(3 + math.sqrt(6))))
+M_simpsons_method = 2.3936536824085960676396763596062912108551517869896079459955549780
 
 
 def rectangle_method(x_a, x_b, h):
@@ -49,10 +49,9 @@ def simpsons_method(x_a, x_b, h):
 
 output_rectangle_method = rectangle_method(0, 6.5, 0.00001)
 output_trapezoid_method = trapezoid_method(0, 6.5, 0.00001)
-output_simpsons_method = simpsons_method(0, 6.5, 0.001)
+output_simpsons_method = simpsons_method(0, 6.5, 0.00001)
 print("quad")
 print(integrate.quad(laplace_function, 0, 6.5), "\n")
-print("h = 0.00001")
 print('rectangle_method')
 print(output_rectangle_method[0], output_rectangle_method[1])
 print('trapezoid_method')
